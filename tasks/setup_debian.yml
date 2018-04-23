@@ -1,0 +1,21 @@
+---
+# file: tasks/setup_debian.yml
+#
+# Task file to setup the Percona apt repository.
+
+# - name: Ensure the percona_apt_dir_source directory exists
+#   file:
+#     path: "{{ percona_apt_dir_source }}"
+#     state: directory
+#
+# - name: Download Percona APT repository installer
+#   get_url:
+#     url: "{{ percona_apt_download_url }}"
+#     dest: "{{ percona_apt_dir_source }}/{{ percona_apt_deb_file }}"
+
+- name: Add the Percona APT repository to the APT sources
+  # deb: "{{ percona_apt_dir_source }}/{{ percona_apt_deb_file }}"
+  apt:
+    deb: "{{ percona_apt_download_url }}"
+    update_cache: "yes"
+    cache_valid_time: 3600

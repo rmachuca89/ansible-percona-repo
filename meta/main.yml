@@ -1,0 +1,28 @@
+---
+galaxy_info:
+  author: Rodrigo Machuca
+  description: Role to setup Percona repository
+
+  license: Apache 2.0
+
+  min_ansible_version: 2.4
+
+  platforms:
+
+    - name: EL
+      versions:
+        - 6
+        - 7
+
+    - name: Ubuntu
+      versions:
+        - xenial
+        - trusty
+
+  galaxy_tags:
+    - percona
+    - repo
+    - percona_repo
+    - database
+
+dependencies: []

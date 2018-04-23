@@ -1,0 +1,9 @@
+---
+# file: tasks/setup_redhat.yml
+#
+# Task file to setup the Percona yum repository.
+
+- name: Add the Percona YUM repository
+  yum:
+    name: "{{ percona_yum_download_url }}"
+    state: present

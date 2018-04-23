@@ -1,0 +1,14 @@
+---
+# tasks file for ansible-repo-percona
+# Sources:
+# https://www.percona.com/doc/percona-repo-config/index.html
+# https://www.percona.com/doc/percona-repo-config/yum-repo.html
+# https://www.percona.com/doc/percona-repo-config/apt-repo.html
+
+- name: Install Percona release package (yum)
+  import_tasks: setup_redhat.yml
+  when: ansible_os_family == 'RedHat'
+
+- name: Install Percona release package (apt)
+  import_tasks: setup_debian.yml
+  when: ansible_os_family == 'Debian'
