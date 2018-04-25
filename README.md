@@ -1,5 +1,6 @@
 Ansible Percona Repo Role
 =========================
+[![Build Status](https://travis-ci.org/rmachuca89/ansible-repo-percona.svg?branch=master)](https://travis-ci.org/rmachuca89/ansible-repo-percona)
 
 A simple ansible role to install the [Percona Repository](https://www.percona.com/doc/percona-repo-config/index.html) on RHEL/CentOS and Debian/Ubuntu based machines.
 
