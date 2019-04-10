@@ -22,7 +22,7 @@ galaxy_info:
   galaxy_tags:
     - percona
     - repo
-    - percona_repo
+    - repository
     - database
 
 dependencies: []
