@@ -3,6 +3,16 @@
 #
 # Task file to setup the Percona apt repository.
 
+- name: Install Percona Prerequisites
+  apt:
+    name: "{{ reqs }}"
+    state: present
+  vars:
+    reqs:
+      - wget
+      - gnupg2
+      - lsb-release
+
 - name: Add the Percona APT repository to the APT sources
   apt:
     deb: "{{ percona_apt_download_url }}"

@@ -1,11 +1,6 @@
 ---
 # file: vars/main.yml
-percona_repo_version: '0.1-4'
 percona_apt_dir_source: '/usr/local/src'
 
-percona_apt_deb_file: "percona-release_{{ percona_repo_version }}.{{ ansible_distribution_release | lower }}_all.deb"
-percona_apt_download_url: "https://repo.percona.com/apt/{{ percona_apt_deb_file }}"
-
-# "http://www.percona.com/downloads/percona-release/redhat/0.1-4/percona-release-0.1-4.noarch.rpm
-percona_yum_rpm_file: "percona-release-{{ percona_repo_version }}.noarch.rpm"
-percona_yum_download_url: "http://www.percona.com/downloads/percona-release/redhat/{{ percona_repo_version }}/{{ percona_yum_rpm_file }}"
+percona_apt_download_url: "https://repo.percona.com/apt/percona-release_latest.generic_all.deb"
+percona_yum_download_url: "https://repo.percona.com/yum/percona-release-latest.noarch.rpm"
