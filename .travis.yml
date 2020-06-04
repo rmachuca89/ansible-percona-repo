@@ -16,6 +16,8 @@ install:
   - pip install molecule
   # - pip install required driver (e.g. docker, python-vagrant, shade, boto, apache-libcloud)
   - pip install docker
+  - pip install yamllint flake8 ansible-lint
+  - pip install testinfra
 script:
   - ansible --version
   - molecule --version
